@@ -1,0 +1,30 @@
+
+@import "../../node_modules/tailwindcss/tailwind";
+
+@layer base {
+  body {
+    font-family: "RedHatDisplay", sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1080px];
+  }
+
+  .btn {
+    @apply inline-block py-[10px] px-8 rounded-2xl text-xl tracking-tight text-center whitespace-nowrap;
+
+    @screen xs {
+      @apply text-base;
+    }
+
+    &--red {
+      @apply shadow-customred bg-lightred text-white ;
+    }
+
+    &--white {
+      @apply text-lightred border-2 border-lightred;
+    }
+  }
+}

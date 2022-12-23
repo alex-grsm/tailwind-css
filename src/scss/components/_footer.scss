@@ -1,0 +1,74 @@
+.footer {
+  @apply bg-darkgray py-20;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  @screen sm {
+    @apply py-12;
+  }
+
+  @screen xs {
+    @apply py-10;
+  }
+
+  &__inner {
+    @apply grid grid-cols-3 gap-[30px];
+
+    @screen md {
+      @apply grid-cols-2;
+    }
+
+    @screen xs {
+      @apply grid-cols-1;
+    }
+  }
+
+  &__box {
+    @apply flex flex-col items-baseline;
+
+    > .image {
+      @apply mb-5;
+    }
+    h5 {
+      @apply font-medium text-xl text-lightred mb-5;
+
+      @screen xs {
+        @apply text-base;
+      }
+    }
+    > p {
+      @apply text-xl text-white tracking-tight mb-3;
+
+      @screen xs {
+        @apply text-base;
+      }
+    }
+    > input {
+      @apply mb-[20px] w-full bg-[#454545] flex py-3 px-4 rounded-xl border-[1px] border-[#595959] text-white;
+      &:focus {
+        @apply outline-none border-lightred;
+      }
+      &::placeholder {
+        @apply italic;
+      }
+    }
+    .btn {
+      @apply max-w-max;
+    }
+  }
+
+  &__list {
+    li {
+      @apply mb-3;
+    }
+    a {
+      @apply font-medium tracking-tight text-white text-xl;
+
+      @screen xs {
+        @apply text-base;
+      }
+    }
+  }
+}

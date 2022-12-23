@@ -1,0 +1,42 @@
+.about {
+  &__inner {
+    @apply grid grid-cols-2 gap-[30px];
+
+    @screen md {
+      @apply grid-cols-1;
+    }
+  }
+
+  &__descr {
+    @apply flex flex-col;
+    > span {
+      @apply font-bold text-xl tracking-tight text-lightred mb-[2px];
+    }
+    > h2 {
+      @apply font-black text-4xl tracking-tight mb-[10px];
+
+      @screen sm {
+        @apply text-3xl;
+      }
+    }
+    > p {
+      @apply text-lg mb-7 max-w-sm;
+
+      @screen md {
+        @apply max-w-full;
+      }
+
+      @screen sm {
+        @apply text-base;
+      }
+    }
+  }
+
+  &__images {
+    @apply flex justify-end;
+
+    @screen md {
+      @apply justify-center w-full;
+    }
+  }
+}

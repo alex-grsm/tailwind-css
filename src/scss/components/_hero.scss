@@ -1,0 +1,34 @@
+.hero {
+  h1 {
+    @apply font-black text-5xl max-w-2xl text-center mx-auto leading-snug;
+
+    @screen md {
+      @apply text-4xl;
+    }
+
+    @screen sm {
+      @apply max-w-full;
+    }
+
+  }
+
+  p {
+    @apply text-xl tracking-tight text-center max-w-xl mx-auto mt-[18px];
+
+    @screen md {
+      @apply text-lg mt-4;
+    }
+
+    @screen sm {
+      @apply text-base mt-2;
+    }
+  }
+
+  &__btn {
+    @apply flex justify-center gap-7 mt-8;
+
+    @screen xs {
+      @apply gap-4 mt-5;
+    }
+  }
+}

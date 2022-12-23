@@ -1,0 +1,55 @@
+.header {
+  @apply pt-[26px] pb-[26px] relative;
+
+  &__inner {
+    @apply flex justify-between items-center;
+  }
+
+  &__logo {
+    @apply w-[135px] h-[35px] min-w-[135px] min-h-[35px];
+  }
+}
+
+.nav {
+  &__list {
+    @apply flex gap-12;
+  }
+
+  &__link {
+    @apply font-medium text-xl text-lightblack transition-colors;
+    &:hover {
+      @apply text-darkred;
+    }
+
+    @screen lg {
+      @apply text-lg;
+    }
+    @screen md {
+      @apply text-base;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+  @apply z-10;
+
+  @screen sm {
+    @apply block;
+  }
+}
+
+.nav-mobile {
+  @apply absolute left-5 right-5 bg-lightred top-[87px] border-b-8 border-darkred;
+  &.menu--active {
+    @apply block;
+  }
+
+  &__list {
+    @apply flex flex-col items-center;
+  }
+
+  &__link {
+    @apply py-4 block text-white font-medium;
+  }
+}

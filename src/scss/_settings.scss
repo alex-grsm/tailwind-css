@@ -1,0 +1,34 @@
+section {
+  @apply py-24;
+
+  @screen md {
+    @apply py-16;
+  }
+
+  @screen sm {
+    @apply py-12;
+  }
+
+  @screen xs {
+    @apply py-10;
+  }
+}
+
+/** DARK MODE */
+html{
+  &.dark {
+
+    body {
+      @apply bg-slate-900 text-white;
+    }
+
+    .header__logo {
+      @apply fill-white;
+    }
+
+    .nav__link {
+      @apply text-white;
+    }
+
+  }
+}
