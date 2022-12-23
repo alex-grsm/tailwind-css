@@ -1,1 +1,1 @@
-# tailwind-css example
+# TailwindCSS example template
